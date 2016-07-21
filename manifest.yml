@@ -1,0 +1,34 @@
+---
+services:
+  - logstash-1
+
+env:
+  protocol: https
+  domain: run.aws-usw02-pr.ice.predix.io
+  SPRING_PROFILES_ACTIVE: cloud
+  MEMORY_LIMIT: 1G
+  CLIENT_ID: apm_app
+  CLIENT_SECRET: 4h0dzucmop3t4nsq6qo4zg0m
+
+
+applications:
+- name: apm-ext-service-hackapm
+  memory: 2G
+  instances: 1
+  host: apm-ext-service-hackapm
+  path: ./target/apm-sample-service-0.1.0.jar
+  timeout: 180
+  services:
+  - apm-alarm-management
+  - apm-adapter-config-provider
+  - apm-s95-adapter
+  - apm-timeseries-services
+  - apm-profile
+  - apm-config
+  - apm-note-management
+  - apm-asset
+  - apm-cases
+  - apm-filtering-meta-model
+  - apm-blob-storage
+  - apm-gateway
+
