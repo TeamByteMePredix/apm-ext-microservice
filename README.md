@@ -1,10 +1,13 @@
-Micrservice Seed
+Sample Microservice using APM services
 ===
+
+**Overview**
+This is a sample microservice that uses Asset service's REST API
 
 **Cloning the repo and running the service locally**
 
 ##Clone the repository
-git@github.com:apmdev/apm-ext-microservice.git
+git clone https://github.com/apmdev/apm-ext-microservice.git
 
 ##Build and compile the application
 mvn clean install
