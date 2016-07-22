@@ -1,7 +1,3 @@
----
-services:
-  - logstash-1
-
 env:
   protocol: https
   domain: run.aws-usw02-pr.ice.predix.io
