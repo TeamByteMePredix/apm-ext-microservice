@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -35,15 +34,12 @@ public class AssetService {
     @Autowired
     private RestClient restClient;
 
-    @Value("${apm.asset.url}")
-    private String assetUrl;
-
     @RequestMapping(value= "/assets", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.OK)
     public ResponseEntity<String> getAssets(HttpServletRequest request) {
 
         log.info("Fetching Assets");
-        String url = this.assetUrl + "/assets?components=BASIC&pageSize=1000";
+        String url = this.restClient.getAssetUrl() + "/assets?components=BASIC&pageSize=1000";
         ResponseEntity<String> response = this.restClient.execute(request, url, HttpMethod.GET, "");
         return new ResponseEntity<>(response.getBody(), response.getStatusCode());
     }

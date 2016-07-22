@@ -17,6 +17,7 @@ import java.util.Enumeration;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
+import lombok.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,6 +31,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
 @Component
+@Getter
 public class RestClient {
     private static final Logger logger = LoggerFactory.getLogger(RestClient.class);
 
