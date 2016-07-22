@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
  
   <groupId>com.ge.apm.sample.service</groupId>
-  <artifactId>apm-sample-microservice</artifactId>
+  <artifactId>apm-ext-microservice</artifactId>
   <version>0.1.0</version>
   <packaging>jar</packaging>
 
