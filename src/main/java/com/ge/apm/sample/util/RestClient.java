@@ -45,7 +45,7 @@ public class RestClient {
 
     @Value("${apm.cases.url}")
     private String casesUrl;
-    @Value("${apm.blob-storage.url}")
+    @Value("${apm.blob.storage.url}")
     private String blobStorageUrl;
     @Value("${apm.asset.url}")
     private String assetUrl;

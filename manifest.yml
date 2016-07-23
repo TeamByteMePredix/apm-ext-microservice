@@ -12,16 +12,5 @@ applications:
   path: ./target/apm-ext-microservice-0.1.0.jar
   timeout: 180
   services:
-  - apm-alarm-management
-  - apm-adapter-config-provider
-  - apm-s95-adapter
-  - apm-timeseries-services
-  - apm-profile
-  - apm-config
-  - apm-note-management
-  - apm-asset
-  - apm-cases
-  - apm-filtering-meta-model
-  - apm-blob-storage
-  - apm-gateway
+  - apm-services
 
